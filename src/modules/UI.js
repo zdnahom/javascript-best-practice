@@ -1,4 +1,4 @@
-export default class UI {
+export default class ToDoUI {
   static remove = (id) => {
     const element = document.getElementById(id);
     const parentToRemove = element.parentNode.parentNode;

@@ -1,5 +1,5 @@
 import { getTodos, setTodos } from './store.js';
-import UI from './UI.js';
+import ToDoUI from './UI.js';
 
 export const updateStatus = (id) => {
   const [statusId] = id.match(/\d+/);
@@ -18,7 +18,7 @@ export const clearTodoList = () => {
   const listToClear = getTodos().filter((todo) => todo.completed === true);
 
   listToClear.forEach((todo) => {
-    UI.remove(todo.id);
+    ToDoUI.remove(todo.id);
   });
   setTodos(listToNotClear);
 };

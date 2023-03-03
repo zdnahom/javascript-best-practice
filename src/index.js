@@ -2,7 +2,7 @@ import './style.css';
 import { getTodos } from './modules/store.js';
 import TodosContainer from './modules/TodosContainer.js';
 import { updateStatus, clearTodoList } from './modules/updateStatus.js';
-import UI from './modules/UI.js';
+import ToDoUI from './modules/UI.js';
 
 const todoLists = getTodos() || [];
 const container = new TodosContainer();
@@ -13,7 +13,7 @@ const { task } = form.elements;
 const clearButton = document.querySelector('.button-wrapper button');
 function populateTodos(data) {
   data.forEach((element) => {
-    UI.add(element.id, element.description, element.completed);
+    ToDoUI.add(element.id, element.description, element.completed);
   });
 }
 form.addEventListener('submit', (event) => {
